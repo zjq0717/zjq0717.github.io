@@ -2,6 +2,20 @@
 
 <!-- start custom head snippets -->
 
+{% if page.url == "/" or page.url == "/index.html" %}
+<!-- Google Scholar bibliographic metadata for the publication on the home page. -->
+<meta name="citation_title" content="Learning Cooperative Bimanual Dexterous Grasp of Large Objects with Tactile Sensing">
+<meta name="citation_author" content="Ziming Li">
+<meta name="citation_author" content="Mingxuan Wu">
+<meta name="citation_author" content="Jiaqi Zhang">
+<meta name="citation_author" content="Hongfei Li">
+<meta name="citation_author" content="Yan Gan">
+<meta name="citation_author" content="Deqiang Ouyang">
+<meta name="citation_author" content="Ning Wang">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_pdf_url" content="{{ base_path }}/files/IROS2026.pdf">
+{% endif %}
+
 <!-- Support for jQuery, this needs to be first so that it has a chance to load. -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
