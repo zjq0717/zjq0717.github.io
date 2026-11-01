@@ -15,8 +15,8 @@ name                     : &name "Jiaqi Zhang"
 description              : &description "Jiaqi Zhang is an incoming PhD student in Computer Science at the University of Auckland."
 url                      : https://zjq0717.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "/jiaqizhang.github.io" # Project Pages path for the current repository name
-repository               : "zjq0717/jiaqizhang.github.io"
+baseurl                  : ""
+repository               : "zjq0717/zjq0717.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
