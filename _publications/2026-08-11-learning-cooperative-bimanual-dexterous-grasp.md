@@ -16,8 +16,6 @@ authors:
   - "Ning Wang"
 citation_publication_date: "2026"
 citation_conference_title: "2026 IEEE/RSJ International Conference on Intelligent Robots and Systems"
-citation_arxiv_id: "2608.10383"
-citation_doi: "10.48550/arXiv.2608.10383"
 citation_pdf_url: "/files/IROS2026.pdf"
 paperurl: "/files/IROS2026.pdf"
 scholar_abstract: >-
