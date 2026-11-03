@@ -2,18 +2,24 @@
 
 <!-- start custom head snippets -->
 
-{% if page.url == "/" or page.url == "/index.html" %}
-<!-- Google Scholar bibliographic metadata for the publication on the home page. -->
-<meta name="citation_title" content="Learning Cooperative Bimanual Dexterous Grasp of Large Objects with Tactile Sensing">
-<meta name="citation_author" content="Ziming Li">
-<meta name="citation_author" content="Mingxuan Wu">
-<meta name="citation_author" content="Jiaqi Zhang">
-<meta name="citation_author" content="Hongfei Li">
-<meta name="citation_author" content="Yan Gan">
-<meta name="citation_author" content="Deqiang Ouyang">
-<meta name="citation_author" content="Ning Wang">
-<meta name="citation_publication_date" content="2026">
-<meta name="citation_pdf_url" content="{{ base_path }}/files/IROS2026.pdf">
+{% if page.collection == "publications" %}
+<!-- Google Scholar / Highwire Press bibliographic metadata. -->
+<meta name="citation_title" content="{{ page.title | strip_html | escape }}">
+{% for author in page.authors %}
+<meta name="citation_author" content="{{ author | escape }}">
+{% endfor %}
+{% if page.citation_publication_date %}
+<meta name="citation_publication_date" content="{{ page.citation_publication_date | escape }}">
+{% else %}
+<meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+{% endif %}
+{% if page.citation_conference_title %}<meta name="citation_conference_title" content="{{ page.citation_conference_title | escape }}">{% endif %}
+{% if page.citation_doi %}<meta name="citation_doi" content="{{ page.citation_doi | escape }}">{% endif %}
+{% if page.citation_arxiv_id %}<meta name="citation_arxiv_id" content="{{ page.citation_arxiv_id | escape }}">{% endif %}
+{% if page.scholar_abstract %}<meta name="citation_abstract" content="{{ page.scholar_abstract | strip_html | strip_newlines | escape }}">{% endif %}
+<meta name="citation_language" content="en">
+<meta name="citation_fulltext_html_url" content="{{ page.url | absolute_url }}">
+<meta name="citation_pdf_url" content="{{ page.citation_pdf_url | absolute_url }}">
 {% endif %}
 
 <!-- Support for jQuery, this needs to be first so that it has a chance to load. -->

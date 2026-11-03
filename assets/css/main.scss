@@ -179,6 +179,13 @@ body.one-page-site {
   text-decoration: none;
 }
 
+.publication-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
 .publication-card__link span {
   transition: transform 0.2s ease;
 }
